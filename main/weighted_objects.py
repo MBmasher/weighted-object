@@ -16,6 +16,8 @@ def calculate_nerf(osu_file_path):
     hit_object_list = map(lambda _hit_object: hit_object.convert_hit_object(_hit_object), hit_object_string_list)
 
     # If neither of the two objects are a spinner, calculate their distance snap and add it to a list.
+    global distance_snap_list
+    global time_list
     distance_snap_list = []
     time_list = []
     for x in range(len(hit_object_list) - 1):
