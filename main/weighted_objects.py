@@ -37,24 +37,3 @@ def calculate_nerf(osu_file_path):
                                                         / len(weighted_distance_snap_list))
 
     return final_nerf
-
-
-# Parsing arguments.
-parser = argparse.ArgumentParser(description="A pp system which accounts for the unfair length bonus in some maps.")
-parser.add_argument("path", help="the file path of the osu file")
-parser.add_argument("-p", "--pp", type=float, help="pre-nerf pp value, used to calculate post-nerf pp")
-parser.add_argument("-v", "--verbose", action="store_true", help="increase output verbosity")
-args = parser.parse_args()
-osu_file_path = args.path
-
-# Calculate final nerf.
-final_nerf = calculate_nerf(osu_file_path)
-
-# Print the output.
-if args.verbose:
-    print "The calculated nerf percentage is {}%.".format(final_nerf * 100)
-    if args.pp is not None:
-        print "The calculated pp post-nerf is {}pp.".format(final_nerf * args.pp)
-else:
-    print final_nerf
-    print final_nerf * args.pp
