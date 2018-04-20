@@ -1,7 +1,6 @@
 import sys
 import numpy
 import hit_object
-import argparse
 
 
 # Function to calculate the nerf and return it.
