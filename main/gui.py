@@ -14,7 +14,7 @@ while True:
     # Calculate final nerf.
     final_nerf = weighted_objects.calculate_nerf(osu_file_path)
 
-    distance_snap_list = weighted_objects.distance_snap_list
+    distance_snap_list = weighted_objects.weighted_distance_snap_list
     time_list = weighted_objects.time_list
 
     # Separate list into multiple lists when breaks exist.

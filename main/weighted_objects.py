@@ -16,7 +16,6 @@ def calculate_nerf(osu_file_path):
     hit_object_list = map(lambda _hit_object: hit_object.convert_hit_object(_hit_object), hit_object_string_list)
 
     # If neither of the two objects are a spinner, calculate their distance snap and add it to a list.
-    global distance_snap_list
     global time_list
     distance_snap_list = []
     time_list = []
@@ -28,6 +27,7 @@ def calculate_nerf(osu_file_path):
     distance_snap_max = max(distance_snap_list)
 
     # Weighing distance snap based on the objects' raw distance snap compared to the rest of the map.
+    global weighted_distance_snap_list
     weighted_distance_snap_list = map(lambda distance_snap:
                                       hit_object.calculate_weighting(distance_snap_average,
                                                                      distance_snap_max,

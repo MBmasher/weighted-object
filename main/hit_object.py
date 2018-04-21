@@ -90,6 +90,7 @@ def calculate_weighting(average_distance, max_distance, distance_snap):
 
     # spacing below ~0.67 is weighted just as much as spacing above it, so only relatively
     # BIG jumps will make much of a difference
+    print (raw_weight * 1.5) ** 1.7
     return (raw_weight * 1.5) ** 1.7
 
 
