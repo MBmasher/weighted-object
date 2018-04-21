@@ -6,5 +6,5 @@ setup(name='WeightedObject',
       author='MBmasher',
       author_email='mbmasher@gmail.com',
       packages=['main'],
-	  requires=['numpy']
+	  requires=['numpy', 'Tkinter', 'ttk']
      )
