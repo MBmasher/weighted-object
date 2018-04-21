@@ -47,7 +47,6 @@ while True:
     ms = time_list[0]
     note_number = 0
 
-
     # Function to be used to initialize the timer.
 
     def first_load():
